@@ -1,1 +1,88 @@
 @import url(reset.css);
+
+html{
+  font-size: 10px;
+}
+body{
+  background-color: black;
+}
+header{
+  height: 70px;
+  display: block;
+}
+main{
+  display: block;
+}
+main .top-visual{
+  border: 4px solid orange;
+  background: darkblue;
+  width: 100%;
+  height: -webkit-calc(100vh - 70px);
+  position: relative;
+}
+main .top-visual .top-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 750px;
+  border: 2px solid blue;
+  background: 
+    url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/hero/genesis-kr-main-key-visual-gv80-24fl-desktop-2560x900.jpg")
+    no-repeat center/cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+main .top-visual .top-img::After {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  opacity: 0.35;
+  width: 100%;
+  height: 20%;
+  border: 3px red solid;
+}
+main .top-visual .top-txt{
+  width: 100%;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 8.1%;
+  padding: 0 33.8rem;
+  border: 1px solid yellow;
+  font-weight: 400;
+  font-size: 22px;
+}
+main .top-visual .top-txt .top-txt-co{
+  width: 100%;
+  font-size: 2.6rem;
+  border: 1px solid #fff;
+  display: block;
+}
+main .top-visual .top-txt .top-txt-mo{
+  width: 100%;
+  font-size: 80px;
+  border: 1px solid #fff;
+  display: block;
+}
+
+main .top-visual .bottom-txt{
+  color: #fff;
+  display: block;
+  position: absolute;
+  bottom:21.8%;
+  left: 338px;
+  border: 1px solid yellow;
+  font-weight: 400;
+  font-size: 16px;
+}
+main .top-visual .bottom-txt .bottom-txt-more{
+  
+}
+main .top-visual .bottom-txt .bottom-txt-quo{
+  
+}
+
+
+
