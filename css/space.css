@@ -21,12 +21,14 @@
   font-style: normal; 
 }
 
-body {
-  font-size: 18px;
+html {
+  font-size: 10px;
 }
 
 /* ---------------- start: main style --------------------- */
-
+body {
+  font-family: GenesisSansTextKRRegular, sans-serif;
+}
 /* section1(space main) style */
 main .spaceMain {
   height: 100vh;
@@ -34,19 +36,15 @@ main .spaceMain {
   position: relative;
   overflow: hidden;
 
-
-  /* SCROLL TO EXPLORE를 가로 가운데 정렬 */
-  display: flex;
+  display: flex; /* SCROLL TO EXPLORE를 가로 가운데 정렬 */
   flex-direction: column;
   align-items: center;
 
-  /* 글씨 기본 설정 */
-  color: white;
+  color: white;   /* 글씨 기본 설정 */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.486);
 }
 
-/* 글자색이 하얀 배경색에도 잘 보이게 하기 위함 */
-main .spaceMain::after {
+main .spaceMain::after { /* 글자색이 하얀 배경색에도 잘 보이게 하기 위함 */
   content: '';
   width: 100%;
   height: 100%;
@@ -59,18 +57,15 @@ main .spaceMain::after {
 }
 main .spaceMain .background-video {
   width: 100%;
-  /* .spaceMain에 꽉차게 배치 */
-  position: absolute;
+
+  position: absolute;   /* .spaceMain에 꽉차게 배치 */
   left: 0;
   top: 0;
-  
-  /* spaceMain의 텍스트가 보이게 */
-  z-index: -3;
+  z-index: -3;   /* spaceMain의 텍스트가 보이게 */
 }
 
 main .spaceMain .mainTitle {
-  /* .spaceMain의 정중앙에 배치 */
-  position: absolute;
+  position: absolute;   /* .spaceMain의 정중앙에 배치 */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -79,34 +74,264 @@ main .spaceMain .mainTitle {
 }
 
 main .spaceMain .mainTitle h1 {
-  font-size: 60px;
+  font-size: 6rem;
   font-family: 'GenesisSansHeadKRLight', sans-serif;
 }
 
 main .spaceMain .mainTitle h2 {
-  font-size: 20px; 
+  font-size: 2rem; 
   transform: translate(0, 70px);
   font-family: 'GenesisSansTextKRRegular', sans-serif;
 }
 
 
 main .spaceMain .mainScroll {
-  /* 위치 조정 */
-  position: absolute;
+  position: absolute;   /* 위치 조정 */
   bottom: 4%;
-  
-  /* 텍스트 가운데 정렬 */
-  display: flex;
+
+  display: flex;  /* 텍스트 가운데 정렬 */
   flex-direction: column;
   align-items: center;
 
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 main .spaceMain .mainScroll p {
   margin-bottom: 12px;
   font-family: 'GenesisSansHeadKRRegular', sans-serif;
 }
+
+/* section2(space intro) style */
+main section.spaceIntro {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background: black;
+}
+
+main section.spaceIntro .intro {
+  width: 500px
+}
+
+
+main section.spaceIntro .intro .introTitle {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 120px 0 100px 100px;
+} 
+
+@media (max-width: 1560px) {
+  main section.spaceIntro .intro .introTitle {
+    padding-bottom: 0;
+    padding-top: 100px;
+  }
+}
+
+main section.spaceIntro .intro .introTitle .content h2 {
+  margin-bottom: 48px;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
+  font-size: 4.2rem;
+}
+
+main section.spaceIntro .intro .introTitle .content span {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  font-family: 'GenesisSansHeadKRRegular', sans-serif;
+}
+
+@media (max-width: 1560px) {
+  main section.spaceIntro .intro .introTitle .content span {
+    display: none; /* 작은 화면에서 없애기 */
+  }
+}
+
+
+main section.spaceIntro .intro .introTitle .content p {
+  font-size: 1.9rem;
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
+  line-height: 140%;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+}
+
+@media (max-width: 1560px) {
+  main section.spaceIntro .intro .introTitle .content p {
+    font-size: 1.4rem; /* 작은 화면에서 글자 크기 줄이기 */
+  }
+}
+
+main section.spaceIntro .intro .introTitle .content a {
+  font-size: 1.4rem;
+  line-height: 130%;
+  font-family: GenesisSansTextKRRegular, sans-serif;
+  opacity: 0.6;
+  position: relative /* ::before 생성용 */
+}
+
+main section.spaceIntro .intro .introTitle .content a::before { 
+  /* Discover More 텍스트 글자 밑에 막대 만들기 */
+  content: '';
+  width: 0;
+  height: 1px;
+  background: white;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  z-index: 3;
+} 
+
+main section.spaceIntro .intro .introTitle .content a:hover::before { 
+  /* 막대가에 hover하면 막대 길이가 점점 길어지게 하기 */
+  opacity: 0.6;
+  animation: bar 0.6s forwards;
+} 
+
+@keyframes bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+main section.spaceIntro .intro .introTitle .slidebar li button {
+  color: white;
+  opacity: 0.6;
+  background: transparent;
+  border: 0 solid #000;
+  font-size: 1.6rem;
+}
+
+main section.spaceIntro .intro .introTitle .slidebar li button:hover {
+  opacity: 1;
+}
+
+
+main section.spaceIntro .intro .introTitle ul.slidebar {
+  display: flex;
+}
+
+main section.spaceIntro .intro .introTitle ul.slidebar button{
+  margin-right: 15px;
+}
+
+main section.spaceIntro .photos {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+@media (max-width:1560px) {
+  main section.spaceIntro .photos {
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
+}
+
+
+main section.spaceIntro .photos div img {
+  width: 700px;
+  margin-right: 30px;
+  overflow: hidden;
+  height: 100%;
+  opacity: 1;
+} 
+
+@media (max-width:1560px) {
+  main section.spaceIntro .photos div img {
+    margin-right: 12px;
+  }
+}
+
+/* section3(space content) style */
+main > section.spaceContent {
+  height: 1536px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  position: relative;
+  background: url('https://www.genesis.com/etc.clientlibs/genesis-p2/kr/clientlibs/clientlib-spacepage/resources/assets/images/space/overview/main-intro/spacebg-t.png');
+  background-size: cover;
+  background-attachment: fixed; /* 백그라운드 이미지 고정!! */
+  font-size: 1.8rem;
+}
+ 
+main > section.spaceContent::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+main section.spaceContent .uppercontent {
+  padding: 60px 100px 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10; /* 글자가 배경 가상화면요소 앞에 보이게 */
+}
+
+main section.spaceContent .uppercontent span {
+  font-weight: 600;
+} 
+
+main section.spaceContent .uppercontent .content {
+  width: 349px;
+} 
+
+main section.spaceContent .uppercontent .content span {
+  display: block;
+  margin-bottom: calc(1em*2.3);
+}
+
+main section.spaceContent .uppercontent .content p {
+  line-height: 140%;
+  letter-spacing: -1px;
+  text-align: justify;
+}
+
+main section.spaceContent .image_container {
+  margin: auto;
+  width: 28%;
+  height: 20%;
+  z-index: 100;
+  overflow: hidden;
+}
+
+main section.spaceContent .image_container img {
+  width: 100%;
+}
+
+main section.spaceContent .bottomcontent {
+  z-index: 50;
+  font-size: 6rem;
+  font-weight: 300;
+  padding: 0 100px 60px;
+  letter-spacing: -3.36px;
+}
+
+main section.spaceContent .bottomcontent p span {
+  display: block;
+  line-height: 120%;
+}
+
+main section.spaceContent .bottomcontent p.down {
+  text-align: right;
+}
+
 
 
 /* ---------------- finish: main style ---------------------*/
