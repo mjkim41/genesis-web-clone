@@ -16,6 +16,7 @@ body {
   color: #fff;
   font-family: 'GenesisSansHeadKRLight';  
   
+  padding-top: 3rem;
 }
 
 body header {
@@ -73,8 +74,6 @@ body header .site-navi-bar .sub-navi-bar .sub-navi-bar-list {
   justify-content: space-between;
   color: #bbb;
 }
-
-body header .site-navi-bar .sub-navi-bar .sub-navi-bar-list
 
 
 
