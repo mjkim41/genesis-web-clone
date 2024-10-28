@@ -16,11 +16,11 @@ header {
 main {
   display: block;
 }
-main .top_padding {
+main .top-padding {
   background-origin: padding-box;
   padding-bottom: 12rem;
 }
-main .top_padding .top-visual {
+main .top-padding .top-visual {
   border: 4px solid orange;
   background: darkblue;
   width: 100%;
@@ -28,7 +28,7 @@ main .top_padding .top-visual {
   height: calc(100vh - 7rem);
   position: relative;
 }
-main .top_padding .top-visual .top-img {
+main .top-padding .top-visual .top-img {
   display: block;
   width: 100%;
   height: 100%;
@@ -39,7 +39,7 @@ main .top_padding .top-visual .top-img {
   background-position-x: 50%;
   background-position-y: 50%;
 }
-main .top_padding .top-visual .top-img::after {
+main .top-padding .top-visual .top-img::after {
   content: "";
   position: absolute;
   z-index: 2;
@@ -50,7 +50,7 @@ main .top_padding .top-visual .top-img::after {
   height: 20%;
   border: 3px red solid;
 }
-main .top_padding .top-visual .top-txt {
+main .top-padding .top-visual .top-txt {
   width: 100%;
   color: #fff;
   display: block;
@@ -61,20 +61,20 @@ main .top_padding .top-visual .top-txt {
   font-weight: 400;
   font-size: 22px;
 }
-main .top_padding .top-visual .top-txt .top-txt-co {
+main .top-padding .top-visual .top-txt .top-txt-co {
   width: 100%;
   font-size: 2.6rem;
   border: 1px solid #fff;
   display: block;
 }
-main .top_padding .top-visual .top-txt .top-txt-mo {
+main .top-padding .top-visual .top-txt .top-txt-mo {
   width: 100%;
   font-size: 80px;
   border: 1px solid #fff;
   display: block;
 }
 
-main .top_padding .top-visual .bottom-txt {
+main .top-padding .top-visual .bottom-txt {
   color: #fff;
   display: block;
   position: absolute;
@@ -84,9 +84,38 @@ main .top_padding .top-visual .bottom-txt {
   font-weight: 400;
   font-size: 16px;
 }
-main .top_padding .top-visual .bottom-txt .bottom-txt-more {
+main .top-padding .top-visual .bottom-txt .bottom-txt-more {
 }
-main .top_padding .top-visual .bottom-txt .bottom-txt-quo {
+main .top-padding .top-visual .bottom-txt .bottom-txt-quo {
+}
+main .top-padding .top-visual .top-bullet-btn {
+  display: flex;
+  border: pink 1px solid;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform : translate(-50%, 400%);
+}
+main .top-padding .top-visual .top-bullet-btn .bullet-padding {
+  padding: 0.4rem;
+  margin: 0 0.4rem;
+  
+  .bullet{
+    text-indent: -9999px;
+    border: #111 solid 2px;
+    background: #777;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .bullet:hover{
+    color: #000;
+    border-color: #fff;
+  }
 }
 
 /* top-visual style end */
@@ -218,10 +247,16 @@ main .model-padding .model-visual .mo-category .mo-bullet-btn .bullet-padding {
   margin: 0 0.4rem;
   .bullet {
     text-indent: -9999px;
-    border: #777 solid 2px;
+    border: #111 solid 2px;
     background: #777;
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    z-index: 100;
+  }
+  .bullet:hover{
+    border: #fff solid 2px;
+    background: #111;
   }
 }
 
