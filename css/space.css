@@ -24,24 +24,36 @@
 html {
   font-size: 10px;
 }
+
+body {
+  line-height: 1.2;
+}
+
+@media(min-width:1900px) {
+  br.noEffectforBigMonitor {
+    display:none;
+  }
+}
+
 /* ------------- header -------------- */
 header nav {
   font-family: 'GenesisSansHeadKRRegular', sans-serif;
   background: black;
-  color: rgba(255, 255, 255, 0.833);
-  padding: 0 12rem;
+  color: #bbbbbb;
+  padding: 0 14rem;
+  height: 6.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 100000;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 @media (max-width:1560px) {
   header nav {
-    padding: 0 10rem;
+    padding: 0 12rem;
     font-size: 1.4rem;
   }
 }
@@ -54,15 +66,27 @@ header nav .menuRight .letter {
   align-items: center;
 }
 
-header nav ul li,
-header nav .menuRight .search,
-header nav .logoAndMenuLeft .logo img {
-  margin-right: 3.9rem;
-  /* background: yellow; */
+header nav .logoAndMenuLeft .logo img,
+header nav ul.menuLeft li {
+  margin-right: 5.8rem;
+}
+
+@media (max-width: 1560px) {
+  header nav .logoAndMenuLeft .logo img,
+  header nav ul.menuLeft li {
+    margin-right: 4rem;
+  }
+}
+
+header nav .menuRight ul li,
+header nav .menuRight .search {
+  margin-right: 3.5rem;
 }
 
 header nav ul li {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 header nav .logoAndMenuLeft .logo {
@@ -94,10 +118,16 @@ header nav .menuRight .hide {
 }
 
 header nav .menuRight .hide li {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-family: 'GenesisSansTextKRRegular', sans-serif;
   color: rgba(232, 198, 198, 0.7);
   padding: 5px 2px;
+}
+
+@media (max-width:1560px) {
+  header nav .menuRight .hide li {
+    font-size: 1.4rem;
+  }
 }
 
 header nav .menuRight .hide li a {
@@ -110,7 +140,15 @@ header nav .menuRight .hide input {
   border: none;
   color: white;
   width: 100%;
+  font-size: 1.5rem;
 }
+
+@media (max-width:1560px) {
+  header nav .menuRight .hide input {
+    font-size: 1.4rem;
+  }
+}
+
 
 header nav .menuRight .search:active .hide {
   display: block;
@@ -202,9 +240,14 @@ main section.spaceIntro {
 }
 
 main section.spaceIntro .intro {
-  width: 500px
+  width: 650px;;
 }
 
+@media (max-width:1560px) {
+  main section.spaceIntro .intro {
+    width: 600px;
+  }
+}
 
 main section.spaceIntro .intro .introTitle {
   height: 100%;
@@ -212,13 +255,12 @@ main section.spaceIntro .intro .introTitle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 120px 0 100px 100px;
+  padding: 170px 0 100px 140px;
 } 
 
 @media (max-width: 1560px) {
   main section.spaceIntro .intro .introTitle {
-    padding-bottom: 0;
-    padding-top: 100px;
+    padding: 100px 76px 0 100px;
   }
 }
 
@@ -230,8 +272,9 @@ main section.spaceIntro .intro .introTitle .content h2 {
 
 main section.spaceIntro .intro .introTitle .content span {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 2.5rem;
+  line-height: 130%;
   font-family: 'GenesisSansHeadKRRegular', sans-serif;
 }
 
@@ -243,7 +286,7 @@ main section.spaceIntro .intro .introTitle .content span {
 
 
 main section.spaceIntro .intro .introTitle .content p {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-family: 'GenesisSansTextKRRegular', sans-serif;
   line-height: 140%;
   margin-bottom: 24px;
@@ -257,12 +300,18 @@ main section.spaceIntro .intro .introTitle .content p {
 }
 
 main section.spaceIntro .intro .introTitle .content a {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 130%;
-  font-family: GenesisSansTextKRRegular, sans-serif;
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   opacity: 0.6;
   position: relative /* ::before 생성용 */
 }
+
+@media (max-width: 1560px) {
+  main section.spaceIntro .intro .introTitle .content a {
+    font-size: 1.4rem;
+  }
+}  
 
 main section.spaceIntro .intro .introTitle .content a::before { 
   /* Discover More 텍스트 글자 밑에 막대 만들기 */
@@ -293,15 +342,14 @@ main section.spaceIntro .intro .introTitle .content a:hover::before {
 }
 
 main section.spaceIntro .intro .introTitle .slidebar li button {
-  color: white;
-  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.5);
   background: transparent;
   border: 0 solid #000;
   font-size: 1.6rem;
 }
 
 main section.spaceIntro .intro .introTitle .slidebar li button:hover {
-  opacity: 1;
+  color: white;
 }
 
 
@@ -317,7 +365,7 @@ main section.spaceIntro .photos {
   display: flex;
   height: 100vh;
   overflow: hidden;
-  padding-top: 120px;
+  padding-top: 170px;
   padding-bottom: 100px;
 }
 
@@ -369,10 +417,18 @@ main > section.spaceContent::after {
 }
 
 main section.spaceContent .uppercontent {
-  padding: 60px 100px 0;
+  padding: 100px 194px 0 140px;
   display: flex;
   justify-content: space-between;
   z-index: 10; /* 글자가 배경 가상화면요소 앞에 보이게 */
+  font-size: 1.6rem;
+}
+
+@media (max-width:1560px) {
+  main section.spaceContent .uppercontent {
+    padding: 60px 100px 0;
+    font-size: 1.4rem;
+  }
 }
 
 main section.spaceContent .uppercontent span {
@@ -380,7 +436,13 @@ main section.spaceContent .uppercontent span {
 } 
 
 main section.spaceContent .uppercontent .content {
+  width: 615px;
+} 
+
+@media (max-width:1560px) {
+  main section.spaceContent .uppercontent .content {
   width: 349px;
+  }
 } 
 
 main section.spaceContent .uppercontent .content span {
@@ -392,7 +454,13 @@ main section.spaceContent .uppercontent .content p {
   line-height: 140%;
   letter-spacing: -1px;
   text-align: justify;
-  font-size: 1.7rem;
+  font-size: 20px;
+}
+
+@media (max-width:1560px) {
+  main section.spaceContent .uppercontent .content p {
+    font-size: 14px;
+  }
 }
 
 main section.spaceContent .image_container {
@@ -457,6 +525,7 @@ main section.spacePhilosophy .spacePhilosophyContainer span {
 
 main section.spacePhilosophy .spacePhilosophyContainer p {
   font-family: "GenesisSansTextKRRegular", sans-serif;
+  letter-spacing: -0.5px;
 }
 
 main section.spacePhilosophy .spacePhilosophyContainer .upper {
@@ -571,6 +640,12 @@ main section.spaceExperiences1 .upper span {
 
 main section.spaceExperiences1 .upper p {
   flex: 0.67;
+}
+
+@media (min-width:1900px) {
+  main section.spaceExperiences1 .upper p {
+    transform: translate(0, -2px);
+  }
 }
 
 main section.spaceExperiences1 .bottom {
@@ -700,7 +775,7 @@ main section.spaceExperiences3 .contentBox {
   justify-content: space-between;
   position: absolute; /* 글자에 z-index 적용용 */
   left: 0;
-  bottom: 10%;
+  bottom: 25%;
   z-index: 10000;
   width: 100%;
   padding: 0px 140px 0px;
@@ -710,6 +785,7 @@ main section.spaceExperiences3 .contentBox {
 @media (max-width:1560px) {
   main section.spaceExperiences3 .contentBox {
     padding: 0 120px 0;
+    bottom: 10%;
   }
 }
 
@@ -751,12 +827,14 @@ main section.spaceExperiences3 .contentBox .content .detail div span {
   display: block;
   line-height: 110%;
   margin-bottom: 40px;
+  transform: translate(0,-2.5px);
 }
 
 @media (max-width:1560px) {
   main section.spaceExperiences3 .contentBox .content .detail div span {
-    font-size: 42px;
+    font-size: 32px;
     letter-spacing: -0.64px;
+    transform: translate(0, 0);
   }
 }
 
@@ -764,12 +842,18 @@ main section.spaceExperiences3 .contentBox .content .detail div p {
   font-family: 'GenesisSansTextKRRegular', sans-serif;
   font-size: 20px;
   letter-spacing: -0.64px;
-  line-height: 19.6px;
+  line-height: 25.6px;
 }
 
 @media (max-width:1560px) {
   main section.spaceExperiences3 .contentBox .content .detail div p {
     font-size: 14px;
+  }
+}
+
+@media (min-width:1900px) {
+  main section.spaceExperiences3 .contentBox .content .detail div p {
+    width: 506px;
   }
 }
 
@@ -832,9 +916,15 @@ main section.spaceGlobalLocation .head-title p {
 
 main section.spaceGlobalLocation .head-title p.head-title1 {
   font-family: 'GenesisSansHeadKRRegular', sans-serif;
-  margin-bottom: 90px;
+  margin-bottom: 200px;
   font-size: 16px;
   letter-spacing: 1.92px;
+}
+
+@media (max-width:1560px) {
+  main section.spaceGlobalLocation .head-title p.head-title1 {
+    margin-bottom: 90px;
+  }
 }
 
 main section.spaceGlobalLocation .head-title p.head-title2 {
@@ -936,11 +1026,17 @@ main section.spaceGlobalLocation .content ul li:last-child {
 
 main section.spaceGlobalLocation .content ul li p {
   font-family: 'GenesisSansHeadKRLight', sans-serif;
-  font-size: 24px;
+  font-size: 48px;
   font-weight: 300;
   letter-spacing: -0.48px;
   line-height: 100%;
   margin-bottom: 16px;
+}
+
+@media (max-width:1560px) {
+main section.spaceGlobalLocation .content ul li p {
+  font-size: 24px;
+  }
 }
 
 main section.spaceGlobalLocation .content ul li span {
@@ -1050,7 +1146,6 @@ footer .footer_top .share .right {
   font-size: 16px;
   line-height: 1.8rem;
   letter-spacing: 1.4px;
-  text-transform: capitalize;
   text-align: center;
   margin-right: 10px;
   background: transparent;
@@ -1200,6 +1295,13 @@ footer .footer_bottom .row_top .menu ul li {
   margin-top: 2.8rem;
 }
 
+@media (max-width:1560px) {
+  footer .footer_bottom .row_top .menu ul li {
+    margin-top: 2.5rem;
+  }
+}
+
+
 footer .footer_bottom .row_top .menu ul li a {
   font-family: 'GenesisSansTextKRRegular', sans-serif;
   font-size: 1.4rem;
@@ -1235,7 +1337,7 @@ footer .footer_bottom .row_middle ul {
 }
 
 footer .footer_bottom .row_middle ul.legal-notices li {
-  margin-right: 7rem;
+  margin-right: 4.8rem;
   position: relative;
 }
 
@@ -1252,7 +1354,7 @@ footer .footer_bottom .row_middle ul.legal-notices li::after {
   background: rgba(255, 255, 255, 0.2);
   position: absolute;
   top: 0;
-  right: -3.5rem;
+  right: -2.4rem;
   z-index: 10000;
 }
 
@@ -1267,12 +1369,12 @@ footer .footer_bottom .row_middle ul.legal-notices li:last-child::after {
 }
 
 footer .footer_bottom .row_middle ul.legal-notices li:nth-child(3) {
-  color: rgba(255, 52, 52, 1)
+  color: #c36f51;
 }
 
 footer .footer_bottom .row_middle ul.legal-notices li {
   font-size: 1.4rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #bbb;
 }
 
 footer .footer_bottom .row_middle ul.legal-notices li:hover {
@@ -1316,22 +1418,30 @@ footer .footer_bottom .row_middle ul.social-media li a i {
 footer .footer_bottom .row_bottom {
   display: flex;
   justify-content: space-between;
-  padding: 3.2rem 14rem 0;
+  padding: 3.2rem 14rem 3.2rem 16rem;
+  border-bottom: 1px solid #1e1e1e;
+  border-top: 1px solid 1px #1e1e1e;
   font-size: 1.4rem;
 }
 
 @media (max-width:1560px) {
   footer .footer_bottom .row_bottom {
     font-size: 1.2rem;
-    padding: 3.2rem 12rem 0;
+    padding: 3.2rem 12rem 3.2rem 14rem;
   }
 }
 
 footer .footer_bottom .row_bottom ul {
-  width: 50%;
+  width: 90%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+@media (max-width:1560px) {
+  footer .footer_bottom .row_bottom ul {
+   width: 50%;
+  }
 }
 
 footer .footer_bottom .row_bottom ul li a {
@@ -1345,9 +1455,14 @@ footer .footer_bottom .row_bottom ul li a:hover {
 
 footer .footer_bottom .row_bottom ul li {
   position: relative;
-  margin-bottom: 20px;
+  justify-content: flex-start;;
 }
 
+@media (max-width:1560px) {
+  footer .footer_bottom .row_bottom ul li {
+    margin-bottom: 20px;
+  }
+}
 
 footer .footer_bottom .row_bottom ul li.no1::after {
   content:'';
@@ -1391,10 +1506,11 @@ footer .footer_bottom .row_bottom ul li.no3::after {
 
 footer .footer_bottom .row_bottom .language {
   display: flex;
+  align-items: center;
 }
 
 footer .footer_bottom .row_bottom .language button {
-  padding: 11px 14px;
+  padding: 20px 16px;
   height: 50%;
   background: transparent;
   color: white;
@@ -1402,6 +1518,12 @@ footer .footer_bottom .row_bottom .language button {
   align-items: center;
   cursor: pointer;
   border: none;
+}
+
+@media (max-width:1560px) {
+  footer .footer_bottom .row_bottom .language button {
+    padding: 11px 14px;
+  }
 }
 
 footer .footer_bottom .row_bottom .language button.no1 {
@@ -1417,7 +1539,7 @@ footer .copyrights {
   background: black;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 50px 20px;
   position: relative;
 }
 
@@ -1428,7 +1550,7 @@ footer .copyrights {
 }
 
 footer .copyrights .logoContainer .logoImage {
-  width: 13.3rem;
+  width: 14.3rem;
   margin: 0 auto 13px;
 }
 
@@ -1438,6 +1560,9 @@ footer .copyrights .logoContainer .logoImage img{
 
 footer .copyrights .logoContainer p {
   text-align: center;
+  font-size: 1.4rem;
+  line-height: 20px;
+  color: #bbb;
 }
 
 footer .copyrights .isoContainer {
