@@ -28,6 +28,9 @@ main .top-padding .top-visual {
   height: calc(100vh - 7rem);
   position: relative;
 }
+main .top-padding .top-visual {
+  /* 화룡점정 */
+}
 main .top-padding .top-visual .top-img {
   display: block;
   width: 100%;
@@ -76,17 +79,42 @@ main .top-padding .top-visual .top-txt .top-txt-mo {
 
 main .top-padding .top-visual .bottom-txt {
   color: #fff;
-  display: block;
+  display: flex;
   position: absolute;
   bottom: 21.8%;
   left: 33.8rem;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   font-weight: 400;
   font-size: 16px;
 }
-main .top-padding .top-visual .bottom-txt .bottom-txt-more {
+main
+  .top-padding
+  .top-visual
+  .bottom-txt
+  .bottom-txt-wrap
+  .bottom-txt-quo:first-child {
+  margin: 0 0 0 6rem;
 }
-main .top-padding .top-visual .bottom-txt .bottom-txt-quo {
+
+main .top-padding .top-visual .bottom-txt .bottom-txt-wrap .bottom-txt-list{
+  position: relative;
+}
+main .top-padding .top-visual .bottom-txt .bottom-txt-wrap .bottom-txt-list::before {
+  content: "";
+  background: #fff;
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  margin-top: 0.4rem;
+  transition : all 0.4s ease-out;
+}
+main .top-padding .top-visual .bottom-txt .bottom-txt-wrap:hover .bottom-txt-list::before {
+  width: 100%;
+}
+main .top-padding .top-visual .bottom-txt .bottom-txt-wrap:not(:hover) .bottom-txt-list::before {
+  width: 0;
+  transition: none; 
 }
 main .top-padding .top-visual .top-bullet-btn {
   display: flex;
@@ -98,13 +126,13 @@ main .top-padding .top-visual .top-bullet-btn {
   position: absolute;
   top: 75%;
   left: 50%;
-  transform : translate(-50%, 400%);
+  transform: translate(-50%, 400%);
 }
 main .top-padding .top-visual .top-bullet-btn .bullet-padding {
   padding: 0.4rem;
   margin: 0 0.4rem;
-  
-  .bullet{
+
+  .bullet {
     text-indent: -9999px;
     border: #111 solid 2px;
     background: #777;
@@ -112,7 +140,7 @@ main .top-padding .top-visual .top-bullet-btn .bullet-padding {
     height: 12px;
     border-radius: 50%;
   }
-  .bullet:hover{
+  .bullet:hover {
     color: #000;
     border-color: #fff;
   }
@@ -254,7 +282,7 @@ main .model-padding .model-visual .mo-category .mo-bullet-btn .bullet-padding {
     border-radius: 50%;
     z-index: 100;
   }
-  .bullet:hover{
+  .bullet:hover {
     border: #fff solid 2px;
     background: #111;
   }
@@ -397,6 +425,14 @@ main
   top: 100%;
   margin-top: 0.4rem;
 }
+main .awards-visual
+.awards-list
+.awards-item
+.aw-span-wrap
+.aw-item-look-wrap:hover .aw-item-look::before {
+  animation: show 0.4s forwards;
+}
+
 /* awards-visual style end */
 
 /* space-visual style */
@@ -434,6 +470,7 @@ main .space-visual .space-list .space-item::before {
   top: 0;
   left: 0;
 }
+
 main .space-visual .space-list .space-item .space-item-padding {
   position: relative;
 
@@ -462,6 +499,15 @@ main
   position: relative;
   /* border: 1px solid blue; */
 }
+
+main
+  .space-visual
+  .space-list
+  .space-item
+  .space-item-padding
+  .space-look-wrap:hover .space-look::before {
+  animation: show 0.4s forwards;
+}
 main
   .space-visual
   .space-list
@@ -477,6 +523,8 @@ main
   top: 100%;
   margin-top: 0.4rem;
 }
+
+
 /* space style end */
 
 /* event style */
@@ -546,11 +594,11 @@ main .related-padding .related-visual .related-title {
   font-size: 30px;
   margin: 0 0 3.8rem;
 }
-main .related-padding .related-visual .related-list-wrap{
+main .related-padding .related-visual .related-list-wrap {
   padding: 0 14rem;
   height: 46.7rem;
 }
-main .related-padding .related-visual .related-list-wrap .related-list{
+main .related-padding .related-visual .related-list-wrap .related-list {
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -566,15 +614,30 @@ main .related-padding .related-visual .related-list .related-item .related-img {
   height: 33rem;
   border: #000 1px solid;
 }
-main .related-padding .related-visual .related-list  .related-event .related-img{
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-event
+  .related-img {
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/common/related-contents/banner/genesis-related-contents-banner-event-pc-mo-630x404-kr.jpg")
     center/cover;
 }
-main .related-padding .related-visual .related-list  .related-members .related-img{
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-members
+  .related-img {
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/common/related-contents/banner/genesis-related-contents-banner-members-desktop-630x404-kr.jpg")
     center/cover;
 }
-main .related-padding .related-visual .related-list  .related-myapp .related-img{
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-myapp
+  .related-img {
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/common/related-contents/banner/genesis-kr-related-contents-my-genesis-app-desktop-630x404-ko.jpg")
     center/cover;
 }
@@ -602,29 +665,50 @@ main
   .related-visual
   .related-list
   .related-item
-  .rel-span-wrap .rel-look-wrap{
-    display: block;
-    font-size: 16px;
-    margin: 1.8rem 0 0;
-  }
-  main
-  .related-padding
-  .related-visual
-  .related-list
-  .related-item
-  .rel-span-wrap .rel-look-wrap .related-look{
-    position: relative;
-  }
+  .rel-span-wrap
+  .rel-look-wrap {
+  display: block;
+  font-size: 16px;
+  margin: 1.8rem 0 0;
+}
 main
   .related-padding
   .related-visual
   .related-list
   .related-item
-  .rel-span-wrap .rel-look-wrap .related-look::before{
-    content: "";
-    background: #111;
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 100%;
+  .rel-span-wrap
+  .rel-look-wrap
+  .related-look {
+  position: relative;
+}
+.related-padding
+.related-visual
+.related-list
+.related-item
+.rel-span-wrap
+.rel-look-wrap:hover .related-look::before {
+  animation: show 0.4s forwards;
+}
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-item
+  .rel-span-wrap
+  .rel-look-wrap
+  .related-look::before {
+  content: "";
+  background: #111;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+}
+@keyframes show{
+  0%{
+    width: 0;
   }
+  100%{
+    width: 100%;
+  }
+}
