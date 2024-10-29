@@ -1,45 +1,70 @@
 @import url(reset.css);
 
+@font-face {
+  font-family: 'GenesisSansHeadKRLight';
+  src: url('../font/GenesisSansHeadKRLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'GenesisSansTextKRRegular;';
+  src: url('../font/GenesisSansTextKRRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'GenesisSansHeadKRRegular';
+  src: url('../font/GenesisSansHeadKRRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
 html {
   font-size: 10px;
 }
-body {
+body .wrap{
   background-color: black;
   color: #fff;
   line-height: 1.2;
+  position: relative;
 }
 header {
-  height: 70px;
+  height: 69px;
   display: block;
 }
 
 main {
   display: block;
 }
-main .top_padding {
+main .top-padding {
   background-origin: padding-box;
   padding-bottom: 12rem;
 }
-main .top_padding .top-visual {
-  border: 4px solid orange;
+main .top-padding .top-visual {
+  /* border: 4px solid orange; */
   background: darkblue;
   width: 100%;
   /* height: -webkit-calc(100vh - 70px); */
-  height: calc(100vh - 7rem);
+  height: calc(100vh - 6.9rem);
   position: relative;
 }
-main .top_padding .top-visual .top-img {
+main .top-padding .top-visual {
+  /* 화룡점정 */
+}
+main .top-padding .top-visual .top-img {
   display: block;
   width: 100%;
   height: 100%;
   min-height: 750px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/hero/genesis-kr-main-key-visual-gv80-24fl-desktop-2560x900.jpg")
     no-repeat center/cover;
   background-position-x: 50%;
   background-position-y: 50%;
 }
-main .top_padding .top-visual .top-img::after {
+main .top-padding .top-visual .top-img::after {
   content: "";
   position: absolute;
   z-index: 2;
@@ -48,45 +73,101 @@ main .top_padding .top-visual .top-img::after {
   opacity: 0.35;
   width: 100%;
   height: 20%;
-  border: 3px red solid;
+  /* border: 3px red solid; */
 }
-main .top_padding .top-visual .top-txt {
+main .top-padding .top-visual .top-txt {
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
   width: 100%;
   color: #fff;
   display: block;
   position: absolute;
   top: 8.1%;
   padding: 0 33.8rem;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   font-weight: 400;
   font-size: 22px;
 }
-main .top_padding .top-visual .top-txt .top-txt-co {
+main .top-padding .top-visual .top-txt .top-txt-co {
   width: 100%;
   font-size: 2.6rem;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   display: block;
 }
-main .top_padding .top-visual .top-txt .top-txt-mo {
+main .top-padding .top-visual .top-txt .top-txt-mo {
   width: 100%;
   font-size: 80px;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   display: block;
 }
 
-main .top_padding .top-visual .bottom-txt {
+main .top-padding .top-visual .bottom-txt {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   color: #fff;
-  display: block;
+  display: flex;
   position: absolute;
   bottom: 21.8%;
   left: 33.8rem;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   font-weight: 400;
   font-size: 16px;
 }
-main .top_padding .top-visual .bottom-txt .bottom-txt-more {
+main
+  .top-padding
+  .top-visual
+  .bottom-txt
+  .bottom-txt-wrap
+  .bottom-txt-quo:first-child {
+  margin: 0 0 0 6rem;
 }
-main .top_padding .top-visual .bottom-txt .bottom-txt-quo {
+
+main .top-padding .top-visual .bottom-txt .bottom-txt-wrap .bottom-txt-list{
+  position: relative;
+}
+main .top-padding .top-visual .bottom-txt .bottom-txt-wrap .bottom-txt-list::before {
+  content: "";
+  background: #fff;
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  margin-top: 0.4rem;
+  transition : all 0.4s ease-out;
+}
+main .top-padding .top-visual .bottom-txt .bottom-txt-wrap:hover .bottom-txt-list::before {
+  width: 100%;
+}
+main .top-padding .top-visual .bottom-txt .bottom-txt-wrap:not(:hover) .bottom-txt-list::before {
+  width: 0;
+  transition: none; 
+}
+main .top-padding .top-visual .top-bullet-btn {
+  display: flex;
+  /* border: pink 1px solid; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 400%);
+}
+main .top-padding .top-visual .top-bullet-btn .bullet-padding {
+  padding: 0.4rem;
+  margin: 0 0.4rem;
+
+  .bullet {
+    text-indent: -9999px;
+    border: #111 solid 2px;
+    background: #777;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .bullet:hover {
+    color: #000;
+    border-color: #fff;
+  }
 }
 
 /* top-visual style end */
@@ -99,7 +180,7 @@ main .model-padding {
   padding: 8rem 0 16rem;
 }
 main .model-padding .model-visual {
-  border: 4px solid orange;
+  /* border: 4px solid orange; */
   width: 100%;
   position: relative;
   padding: 0 14rem;
@@ -113,10 +194,12 @@ main .model-padding .model-visual .mo-title {
   .mo-txt-mo {
     font-size: 42px;
     text-transform: uppercase;
+    font-family: 'GenesisSansHeadKRLight', sans-serif;
   }
   .mo-txt-desc {
     font-size: 16px;
     margin-top: 1.6rem;
+    font-family: 'GenesisSansTextKRRegular', sans-serif;
   }
 }
 main .model-padding .model-visual .mo-category-select {
@@ -131,6 +214,7 @@ main
   .mo-category-select
   .select-list-wrap
   #select-list {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   width: 30rem;
   text-transform: uppercase;
   background: black;
@@ -147,7 +231,7 @@ main
 main .model-padding .model-visual .mo-category {
   margin-top: 9.3rem;
   padding-left: 19.8rem;
-  border: 1px greenyellow solid;
+  /* border: 1px greenyellow solid; */
 }
 
 main .model-padding .model-visual .mo-category .mo-category-item {
@@ -163,19 +247,34 @@ main
   .mo-category
   .mo-category-item
   .item-list-wrap {
-  border: skyblue 1px solid;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
+  /* border: skyblue 1px solid; */
   padding: 3.7rem 4rem 4.9rem;
   width: calc(100% / 3);
   margin: 0 2rem;
+  transition: color 3s ease;
+  position: relative;
 }
+main
+  .model-padding
+  .model-visual
+  .mo-category
+  .mo-category-item
+  .item-list-wrap:hover {
+    border: #262626 1px solid;
+  }
 main .model-padding .model-visual .mo-category .mo-category-item .item-list {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: block;
   .list-name {
-    color: #fff;
+    color: #bbb;
     font-size: 24px;
     text-transform: uppercase;
+    transition: color 0.5s ease;
   }
+}
+main .model-padding .model-visual .mo-category .mo-category-item:hover .item-list .list-name{
+    color :#fff;
 }
 main
   .model-padding
@@ -196,20 +295,34 @@ main
   .mo-category-item
   .item-list
   .mo-category-button {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   margin-top: 4rem;
   color: #fff;
   background-color: #000;
   border: 1px solid #fff;
   width: 100%;
   height: 5.6rem;
-
+  transition: all 0.5s ease;
   span {
     font-size: 16px;
   }
 }
+main
+  .model-padding
+  .model-visual
+  .mo-category
+  .mo-category-item
+  .item-list-wrap:hover
+  .item-list
+  .mo-category-button {
+    color: #000;
+    background-color: #fff;
+    transform: translateY(-10px);
+  }
+
 main .model-padding .model-visual .mo-category .mo-bullet-btn {
   display: flex;
-  border: pink 1px solid;
+  /* border: pink 1px solid; */
   justify-content: center;
   align-items: center;
 }
@@ -218,10 +331,16 @@ main .model-padding .model-visual .mo-category .mo-bullet-btn .bullet-padding {
   margin: 0 0.4rem;
   .bullet {
     text-indent: -9999px;
-    border: #777 solid 2px;
+    border: #111 solid 2px;
     background: #777;
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    z-index: 100;
+  }
+  .bullet:hover {
+    border: #fff solid 2px;
+    background: #111;
   }
 }
 
@@ -233,25 +352,25 @@ main .icon-padding {
 }
 main .icon-visual {
   padding: 12.5rem 0;
-  border: 4px solid orange;
+  /* border: 4px solid orange; */
   width: 100%;
 }
 main .icon-visual .link-inner {
   padding: 0 14rem;
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
 }
 main .icon-visual .link-inner .link-item-list {
   padding: 0 -2rem;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 main .icon-visual .link-inner .link-item-list .item-list-icon {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   display: flex;
   justify-content: center;
 }
 main .icon-visual .link-inner .link-item-list .item-list-icon .icon-item {
   width: 20%;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -263,6 +382,7 @@ main .icon-visual .link-inner .link-item-list .item-list-icon .icon-item img {
   height: 6rem;
 }
 main .icon-visual .link-inner .link-item-list .item-list-icon .icon-item span {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   font-size: 16px;
   margin-top: 2.7rem;
 }
@@ -278,6 +398,7 @@ main .awards-padding .awards-visual {
   background-size: 130%;
 }
 main .awards-visual .aw-txt {
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
   padding: 5.3rem 0 0 33.8rem;
   font-size: 36px;
   text-transform: uppercase;
@@ -294,15 +415,13 @@ main .awards-visual .awards-list .awards-item {
 main .awards-visual .awards-list .awards-item img {
   width: 100%;
 }
+
 main .awards-visual .awards-list .awards-item .aw-span-wrap {
-  width: 100%;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
   min-height: 32.3rem;
   background: #111;
   padding: 4rem 4rem 0;
   height: fit-content;
-}
-
-main .awards-visual .awards-list .awards-item .aw-span-wrap {
   width: 100%;
   flex-direction: column;
   justify-content: top;
@@ -320,11 +439,13 @@ main .awards-visual .awards-list .awards-item .aw-span-wrap {
     margin: 0 0 2.1rem;
   }
   .aw-item-desc {
+    font-family: 'GenesisSansTextKRRegular', sans-serif;
     display: block;
     font-size: 14px;
   }
 }
 main .awards-visual .awards-list .awards-item .aw-span-wrap .aw-item-look-wrap {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   display: flex;
   justify-content: flex-end;
 
@@ -362,6 +483,14 @@ main
   top: 100%;
   margin-top: 0.4rem;
 }
+main .awards-visual
+.awards-list
+.awards-item
+.aw-span-wrap
+.aw-item-look-wrap:hover .aw-item-look::before {
+  animation: show 0.4s forwards;
+}
+
 /* awards-visual style end */
 
 /* space-visual style */
@@ -370,14 +499,14 @@ main .space-padding {
   padding-bottom: 24rem;
 }
 main .space-visual .space-list {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 main .space-visual .space-list .space-item {
   height: 52.4rem;
-  border: 3px solid yellowgreen;
+  /* border: 3px solid yellowgreen; */
   width: 50%;
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/genesis-kr-main-space-15-desktop-960x540-ko.jpg")
     center/cover no-repeat;
@@ -399,10 +528,12 @@ main .space-visual .space-list .space-item::before {
   top: 0;
   left: 0;
 }
+
 main .space-visual .space-list .space-item .space-item-padding {
   position: relative;
-
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   .space-title {
+    font-family: 'GenesisSansHeadKRLight', sans-serif;
     font-size: 42px;
   }
   .space-sub {
@@ -427,6 +558,15 @@ main
   position: relative;
   /* border: 1px solid blue; */
 }
+
+main
+  .space-visual
+  .space-list
+  .space-item
+  .space-item-padding
+  .space-look-wrap:hover .space-look::before {
+  animation: show 0.4s forwards;
+}
 main
   .space-visual
   .space-list
@@ -442,6 +582,8 @@ main
   top: 100%;
   margin-top: 0.4rem;
 }
+
+
 /* space style end */
 
 /* event style */
@@ -462,6 +604,8 @@ main .event-padding .event-visual .event-item {
   margin: 0 14rem;
   position: absolute;
   top: 50%;
+  color: #fff;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
 
   .event-title {
     font-size: 54px;
@@ -482,14 +626,44 @@ main .event-padding .event-visual .event-item .event-link {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
 
   .event-link-txt {
+    font-family: 'GenesisSansTextKRRegular', sans-serif;
     padding: 0 4rem;
     width: 24rem;
+    z-index: 100;
   }
 }
-main .event-padding .event-visual .event-item .event-link .event-link-txt {
-  /* 비포효과 주세요 */
+main .event-padding .event-visual .event-item .event-link::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top:0;
+  left: 0;
+  background: #fff;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  z-index: 5;
+}
+main .event-padding .event-visual .event-item:hover .event-link::before{
+  color: #000;
+  transform-origin:  0% 50%;
+  width: 100%;
+}
+main .event-padding .event-visual .event-item:hover{
+  .event-link-txt{
+    color: #000;
+  }
+}
+/* 이거 해야함 */
+main .event-padding .event-visual .event-item:not(:hover) .event-link::before{
+  opacity: 0;
+  transition: width 0ms ease-in-out .75s,opacity .75s 0ms;
 }
 /* event style end  */
 
@@ -505,17 +679,18 @@ main .related-padding {
 }
 main .related-padding .related-visual {
   width: 100%;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
 }
 main .related-padding .related-visual .related-title {
   text-align: center;
   font-size: 30px;
   margin: 0 0 3.8rem;
 }
-main .related-padding .related-visual .related-list-wrap{
+main .related-padding .related-visual .related-list-wrap {
   padding: 0 14rem;
   height: 46.7rem;
 }
-main .related-padding .related-visual .related-list-wrap .related-list{
+main .related-padding .related-visual .related-list-wrap .related-list {
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -523,7 +698,7 @@ main .related-padding .related-visual .related-list-wrap .related-list{
 }
 main .related-padding .related-visual .related-list-wrap .related-item {
   width: 33.3%;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   padding-left: 4rem;
   height: 100%;
 }
@@ -531,15 +706,30 @@ main .related-padding .related-visual .related-list .related-item .related-img {
   height: 33rem;
   border: #000 1px solid;
 }
-main .related-padding .related-visual .related-list  .related-event .related-img{
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-event
+  .related-img {
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/common/related-contents/banner/genesis-related-contents-banner-event-pc-mo-630x404-kr.jpg")
     center/cover;
 }
-main .related-padding .related-visual .related-list  .related-members .related-img{
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-members
+  .related-img {
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/common/related-contents/banner/genesis-related-contents-banner-members-desktop-630x404-kr.jpg")
     center/cover;
 }
-main .related-padding .related-visual .related-list  .related-myapp .related-img{
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-myapp
+  .related-img {
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/common/related-contents/banner/genesis-kr-related-contents-my-genesis-app-desktop-630x404-ko.jpg")
     center/cover;
 }
@@ -553,6 +743,7 @@ main
   display: block;
   position: relative;
   flex-grow: 1;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
 
   .related-sub {
     font-size: 18px;
@@ -567,29 +758,61 @@ main
   .related-visual
   .related-list
   .related-item
-  .rel-span-wrap .rel-look-wrap{
-    display: block;
-    font-size: 16px;
-    margin: 1.8rem 0 0;
-  }
-  main
-  .related-padding
-  .related-visual
-  .related-list
-  .related-item
-  .rel-span-wrap .rel-look-wrap .related-look{
-    position: relative;
-  }
+  .rel-span-wrap
+  .rel-look-wrap {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
+  display: block;
+  font-size: 16px;
+  margin: 1.8rem 0 0;
+}
 main
   .related-padding
   .related-visual
   .related-list
   .related-item
-  .rel-span-wrap .rel-look-wrap .related-look::before{
-    content: "";
-    background: #111;
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 100%;
+  .rel-span-wrap
+  .rel-look-wrap
+  .related-look {
+  position: relative;
+}
+.related-padding
+.related-visual
+.related-list
+.related-item
+.rel-span-wrap
+.rel-look-wrap:hover .related-look::before {
+  animation: show 0.4s forwards;
+}
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-item
+  .rel-span-wrap
+  .rel-look-wrap
+  .related-look::before {
+  content: "";
+  background: #111;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+}
+
+.wrap .chatbot-fixed .chatbot-icon-holder{
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  z-index: 500;
+}
+
+@keyframes show{
+  0%{
+    width: 0;
   }
+  100%{
+    width: 100%;
+  }
+}
