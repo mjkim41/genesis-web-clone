@@ -1,5 +1,26 @@
 @import url(reset.css);
 
+@font-face {
+  font-family: 'GenesisSansHeadKRLight';
+  src: url('../font/GenesisSansHeadKRLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'GenesisSansTextKRRegular;';
+  src: url('../font/GenesisSansTextKRRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'GenesisSansHeadKRRegular';
+  src: url('../font/GenesisSansHeadKRRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
 html {
   font-size: 10px;
 }
@@ -9,7 +30,7 @@ body {
   line-height: 1.2;
 }
 header {
-  height: 70px;
+  height: 69px;
   display: block;
 }
 
@@ -25,7 +46,7 @@ main .top-padding .top-visual {
   background: darkblue;
   width: 100%;
   /* height: -webkit-calc(100vh - 70px); */
-  height: calc(100vh - 7rem);
+  height: calc(100vh - 6.9rem);
   position: relative;
 }
 main .top-padding .top-visual {
@@ -54,6 +75,7 @@ main .top-padding .top-visual .top-img::after {
   border: 3px red solid;
 }
 main .top-padding .top-visual .top-txt {
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
   width: 100%;
   color: #fff;
   display: block;
@@ -78,6 +100,7 @@ main .top-padding .top-visual .top-txt .top-txt-mo {
 }
 
 main .top-padding .top-visual .bottom-txt {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   color: #fff;
   display: flex;
   position: absolute;
@@ -170,10 +193,12 @@ main .model-padding .model-visual .mo-title {
   .mo-txt-mo {
     font-size: 42px;
     text-transform: uppercase;
+    font-family: 'GenesisSansHeadKRLight', sans-serif;
   }
   .mo-txt-desc {
     font-size: 16px;
     margin-top: 1.6rem;
+    font-family: 'GenesisSansTextKRRegular', sans-serif;
   }
 }
 main .model-padding .model-visual .mo-category-select {
@@ -188,6 +213,7 @@ main
   .mo-category-select
   .select-list-wrap
   #select-list {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   width: 30rem;
   text-transform: uppercase;
   background: black;
@@ -220,6 +246,7 @@ main
   .mo-category
   .mo-category-item
   .item-list-wrap {
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
   border: skyblue 1px solid;
   padding: 3.7rem 4rem 4.9rem;
   width: calc(100% / 3);
@@ -267,6 +294,7 @@ main
   .mo-category-item
   .item-list
   .mo-category-button {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   margin-top: 4rem;
   color: #fff;
   background-color: #000;
@@ -353,6 +381,7 @@ main .icon-visual .link-inner .link-item-list .item-list-icon .icon-item img {
   height: 6rem;
 }
 main .icon-visual .link-inner .link-item-list .item-list-icon .icon-item span {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   font-size: 16px;
   margin-top: 2.7rem;
 }
@@ -368,6 +397,7 @@ main .awards-padding .awards-visual {
   background-size: 130%;
 }
 main .awards-visual .aw-txt {
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
   padding: 5.3rem 0 0 33.8rem;
   font-size: 36px;
   text-transform: uppercase;
@@ -384,15 +414,13 @@ main .awards-visual .awards-list .awards-item {
 main .awards-visual .awards-list .awards-item img {
   width: 100%;
 }
+
 main .awards-visual .awards-list .awards-item .aw-span-wrap {
-  width: 100%;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
   min-height: 32.3rem;
   background: #111;
   padding: 4rem 4rem 0;
   height: fit-content;
-}
-
-main .awards-visual .awards-list .awards-item .aw-span-wrap {
   width: 100%;
   flex-direction: column;
   justify-content: top;
@@ -410,11 +438,13 @@ main .awards-visual .awards-list .awards-item .aw-span-wrap {
     margin: 0 0 2.1rem;
   }
   .aw-item-desc {
+    font-family: 'GenesisSansTextKRRegular', sans-serif;
     display: block;
     font-size: 14px;
   }
 }
 main .awards-visual .awards-list .awards-item .aw-span-wrap .aw-item-look-wrap {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   display: flex;
   justify-content: flex-end;
 
@@ -500,8 +530,9 @@ main .space-visual .space-list .space-item::before {
 
 main .space-visual .space-list .space-item .space-item-padding {
   position: relative;
-
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   .space-title {
+    font-family: 'GenesisSansHeadKRLight', sans-serif;
     font-size: 42px;
   }
   .space-sub {
@@ -573,6 +604,7 @@ main .event-padding .event-visual .event-item {
   position: absolute;
   top: 50%;
   color: #fff;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
 
   .event-title {
     font-size: 54px;
@@ -596,6 +628,7 @@ main .event-padding .event-visual .event-item .event-link {
   position: relative;
 
   .event-link-txt {
+    font-family: 'GenesisSansTextKRRegular', sans-serif;
     padding: 0 4rem;
     width: 24rem;
     z-index: 100;
@@ -645,6 +678,7 @@ main .related-padding {
 }
 main .related-padding .related-visual {
   width: 100%;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
 }
 main .related-padding .related-visual .related-title {
   text-align: center;
@@ -708,6 +742,7 @@ main
   display: block;
   position: relative;
   flex-grow: 1;
+  font-family: 'GenesisSansHeadKRLight', sans-serif;
 
   .related-sub {
     font-size: 18px;
@@ -724,6 +759,7 @@ main
   .related-item
   .rel-span-wrap
   .rel-look-wrap {
+  font-family: 'GenesisSansTextKRRegular', sans-serif;
   display: block;
   font-size: 16px;
   margin: 1.8rem 0 0;
