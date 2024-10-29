@@ -24,10 +24,11 @@
 html {
   font-size: 10px;
 }
-body {
+body .wrap{
   background-color: black;
   color: #fff;
   line-height: 1.2;
+  position: relative;
 }
 header {
   height: 69px;
@@ -42,7 +43,7 @@ main .top-padding {
   padding-bottom: 12rem;
 }
 main .top-padding .top-visual {
-  border: 4px solid orange;
+  /* border: 4px solid orange; */
   background: darkblue;
   width: 100%;
   /* height: -webkit-calc(100vh - 70px); */
@@ -57,7 +58,7 @@ main .top-padding .top-visual .top-img {
   width: 100%;
   height: 100%;
   min-height: 750px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/hero/genesis-kr-main-key-visual-gv80-24fl-desktop-2560x900.jpg")
     no-repeat center/cover;
   background-position-x: 50%;
@@ -72,7 +73,7 @@ main .top-padding .top-visual .top-img::after {
   opacity: 0.35;
   width: 100%;
   height: 20%;
-  border: 3px red solid;
+  /* border: 3px red solid; */
 }
 main .top-padding .top-visual .top-txt {
   font-family: 'GenesisSansHeadKRLight', sans-serif;
@@ -82,20 +83,20 @@ main .top-padding .top-visual .top-txt {
   position: absolute;
   top: 8.1%;
   padding: 0 33.8rem;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   font-weight: 400;
   font-size: 22px;
 }
 main .top-padding .top-visual .top-txt .top-txt-co {
   width: 100%;
   font-size: 2.6rem;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   display: block;
 }
 main .top-padding .top-visual .top-txt .top-txt-mo {
   width: 100%;
   font-size: 80px;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   display: block;
 }
 
@@ -141,7 +142,7 @@ main .top-padding .top-visual .bottom-txt .bottom-txt-wrap:not(:hover) .bottom-t
 }
 main .top-padding .top-visual .top-bullet-btn {
   display: flex;
-  border: pink 1px solid;
+  /* border: pink 1px solid; */
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -179,7 +180,7 @@ main .model-padding {
   padding: 8rem 0 16rem;
 }
 main .model-padding .model-visual {
-  border: 4px solid orange;
+  /* border: 4px solid orange; */
   width: 100%;
   position: relative;
   padding: 0 14rem;
@@ -230,7 +231,7 @@ main
 main .model-padding .model-visual .mo-category {
   margin-top: 9.3rem;
   padding-left: 19.8rem;
-  border: 1px greenyellow solid;
+  /* border: 1px greenyellow solid; */
 }
 
 main .model-padding .model-visual .mo-category .mo-category-item {
@@ -247,7 +248,7 @@ main
   .mo-category-item
   .item-list-wrap {
   font-family: 'GenesisSansHeadKRLight', sans-serif;
-  border: skyblue 1px solid;
+  /* border: skyblue 1px solid; */
   padding: 3.7rem 4rem 4.9rem;
   width: calc(100% / 3);
   margin: 0 2rem;
@@ -263,7 +264,7 @@ main
     border: #262626 1px solid;
   }
 main .model-padding .model-visual .mo-category .mo-category-item .item-list {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: block;
   .list-name {
     color: #bbb;
@@ -321,7 +322,7 @@ main
 
 main .model-padding .model-visual .mo-category .mo-bullet-btn {
   display: flex;
-  border: pink 1px solid;
+  /* border: pink 1px solid; */
   justify-content: center;
   align-items: center;
 }
@@ -351,25 +352,25 @@ main .icon-padding {
 }
 main .icon-visual {
   padding: 12.5rem 0;
-  border: 4px solid orange;
+  /* border: 4px solid orange; */
   width: 100%;
 }
 main .icon-visual .link-inner {
   padding: 0 14rem;
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
 }
 main .icon-visual .link-inner .link-item-list {
   padding: 0 -2rem;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 main .icon-visual .link-inner .link-item-list .item-list-icon {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   display: flex;
   justify-content: center;
 }
 main .icon-visual .link-inner .link-item-list .item-list-icon .icon-item {
   width: 20%;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -498,14 +499,14 @@ main .space-padding {
   padding-bottom: 24rem;
 }
 main .space-visual .space-list {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 main .space-visual .space-list .space-item {
   height: 52.4rem;
-  border: 3px solid yellowgreen;
+  /* border: 3px solid yellowgreen; */
   width: 50%;
   background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/genesis-kr-main-space-15-desktop-960x540-ko.jpg")
     center/cover no-repeat;
@@ -697,7 +698,7 @@ main .related-padding .related-visual .related-list-wrap .related-list {
 }
 main .related-padding .related-visual .related-list-wrap .related-item {
   width: 33.3%;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   padding-left: 4rem;
   height: 100%;
 }
@@ -797,19 +798,21 @@ main
   position: absolute;
   top: 100%;
 }
+
+.wrap .chatbot-fixed .chatbot-icon-holder{
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  z-index: 500;
+}
+
 @keyframes show{
   0%{
     width: 0;
   }
   100%{
     width: 100%;
-  }
-}
-@keyframes show2{
-  0%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
   }
 }
