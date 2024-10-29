@@ -1,1 +1,595 @@
 @import url(reset.css);
+
+html {
+  font-size: 10px;
+}
+body {
+  background-color: black;
+  color: #fff;
+  line-height: 1.2;
+}
+header {
+  height: 70px;
+  display: block;
+}
+
+main {
+  display: block;
+}
+main .top_padding {
+  background-origin: padding-box;
+  padding-bottom: 12rem;
+}
+main .top_padding .top-visual {
+  border: 4px solid orange;
+  background: darkblue;
+  width: 100%;
+  /* height: -webkit-calc(100vh - 70px); */
+  height: calc(100vh - 7rem);
+  position: relative;
+}
+main .top_padding .top-visual .top-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 750px;
+  border: 2px solid blue;
+  background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/hero/genesis-kr-main-key-visual-gv80-24fl-desktop-2560x900.jpg")
+    no-repeat center/cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+main .top_padding .top-visual .top-img::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  opacity: 0.35;
+  width: 100%;
+  height: 20%;
+  border: 3px red solid;
+}
+main .top_padding .top-visual .top-txt {
+  width: 100%;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 8.1%;
+  padding: 0 33.8rem;
+  border: 1px solid yellow;
+  font-weight: 400;
+  font-size: 22px;
+}
+main .top_padding .top-visual .top-txt .top-txt-co {
+  width: 100%;
+  font-size: 2.6rem;
+  border: 1px solid #fff;
+  display: block;
+}
+main .top_padding .top-visual .top-txt .top-txt-mo {
+  width: 100%;
+  font-size: 80px;
+  border: 1px solid #fff;
+  display: block;
+}
+
+main .top_padding .top-visual .bottom-txt {
+  color: #fff;
+  display: block;
+  position: absolute;
+  bottom: 21.8%;
+  left: 33.8rem;
+  border: 1px solid yellow;
+  font-weight: 400;
+  font-size: 16px;
+}
+main .top_padding .top-visual .bottom-txt .bottom-txt-more {
+}
+main .top_padding .top-visual .bottom-txt .bottom-txt-quo {
+}
+
+/* top-visual style end */
+/* ======================================================== */
+
+/* model-visual style */
+
+main .model-padding {
+  background-origin: padding-box;
+  padding: 8rem 0 16rem;
+}
+main .model-padding .model-visual {
+  border: 4px solid orange;
+  width: 100%;
+  position: relative;
+  padding: 0 14rem;
+}
+main .model-padding .model-visual .mo-title {
+  display: inline-block;
+  color: #fff;
+}
+main .model-padding .model-visual .mo-title {
+  padding: 0 0 0 19.8rem;
+  .mo-txt-mo {
+    font-size: 42px;
+    text-transform: uppercase;
+  }
+  .mo-txt-desc {
+    font-size: 16px;
+    margin-top: 1.6rem;
+  }
+}
+main .model-padding .model-visual .mo-category-select {
+  /* border: 1px solid #fff; */
+}
+main .model-padding .model-visual .mo-category-select .select-list-wrap {
+  margin: 2.5rem 0 2.5rem 19.8rem;
+}
+main
+  .model-padding
+  .model-visual
+  .mo-category-select
+  .select-list-wrap
+  #select-list {
+  width: 30rem;
+  text-transform: uppercase;
+  background: black;
+  color: #fff;
+  border-style: none;
+  border-bottom: 1px #fff solid;
+  padding: 1.1rem 2.1rem 1rem 1rem;
+  flex: 16;
+  option {
+    font-size: 14px;
+    color: gray;
+  }
+}
+main .model-padding .model-visual .mo-category {
+  margin-top: 9.3rem;
+  padding-left: 19.8rem;
+  border: 1px greenyellow solid;
+}
+
+main .model-padding .model-visual .mo-category .mo-category-item {
+  height: auto;
+  padding: 0 2rem;
+  padding-bottom: 5.6rem;
+  display: flex;
+  justify-content: start;
+}
+main
+  .model-padding
+  .model-visual
+  .mo-category
+  .mo-category-item
+  .item-list-wrap {
+  border: skyblue 1px solid;
+  padding: 3.7rem 4rem 4.9rem;
+  width: calc(100% / 3);
+  margin: 0 2rem;
+}
+main .model-padding .model-visual .mo-category .mo-category-item .item-list {
+  border: 1px solid red;
+  display: block;
+  .list-name {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+}
+main
+  .model-padding
+  .model-visual
+  .mo-category
+  .mo-category-item
+  .item-list
+  .img-holder {
+  margin-top: 4.3rem;
+  img {
+    width: 100%;
+  }
+}
+main
+  .model-padding
+  .model-visual
+  .mo-category
+  .mo-category-item
+  .item-list
+  .mo-category-button {
+  margin-top: 4rem;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
+  width: 100%;
+  height: 5.6rem;
+
+  span {
+    font-size: 16px;
+  }
+}
+main .model-padding .model-visual .mo-category .mo-bullet-btn {
+  display: flex;
+  border: pink 1px solid;
+  justify-content: center;
+  align-items: center;
+}
+main .model-padding .model-visual .mo-category .mo-bullet-btn .bullet-padding {
+  padding: 0.4rem;
+  margin: 0 0.4rem;
+  .bullet {
+    text-indent: -9999px;
+    border: #777 solid 2px;
+    background: #777;
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* icon-visual style */
+
+main .icon-padding {
+  background-origin: padding-box;
+  padding-bottom: 12rem;
+}
+main .icon-visual {
+  padding: 12.5rem 0;
+  border: 4px solid orange;
+  width: 100%;
+}
+main .icon-visual .link-inner {
+  padding: 0 14rem;
+  border: 1px solid pink;
+}
+main .icon-visual .link-inner .link-item-list {
+  padding: 0 -2rem;
+  border: 1px solid yellow;
+}
+main .icon-visual .link-inner .link-item-list .item-list-icon {
+  border: 1px solid orange;
+  display: flex;
+  justify-content: center;
+}
+main .icon-visual .link-inner .link-item-list .item-list-icon .icon-item {
+  width: 20%;
+  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.8rem 7rem 2.4rem;
+}
+main .icon-visual .link-inner .link-item-list .item-list-icon .icon-item img {
+  width: 6rem;
+  height: 6rem;
+}
+main .icon-visual .link-inner .link-item-list .item-list-icon .icon-item span {
+  font-size: 16px;
+  margin-top: 2.7rem;
+}
+
+/* awards-visual style */
+main .awards-padding {
+  background-origin: padding-box;
+  padding-bottom: 24rem;
+}
+main .awards-padding .awards-visual {
+  background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/awards/20240703/genesis-main-reddot-awards-2024-best-of-awards-neolun-concept-660x396.jpg")
+    no-repeat center/cover;
+  background-size: 130%;
+}
+main .awards-visual .aw-txt {
+  padding: 5.3rem 0 0 33.8rem;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+main .awards-visual .awards-list {
+  padding: 4.9rem 0 9.6rem;
+  display: flex;
+  justify-content: center;
+}
+main .awards-visual .awards-list .awards-item {
+  display: inline-block;
+  width: 66rem;
+}
+main .awards-visual .awards-list .awards-item img {
+  width: 100%;
+}
+main .awards-visual .awards-list .awards-item .aw-span-wrap {
+  width: 100%;
+  min-height: 32.3rem;
+  background: #111;
+  padding: 4rem 4rem 0;
+  height: fit-content;
+}
+
+main .awards-visual .awards-list .awards-item .aw-span-wrap {
+  width: 100%;
+  flex-direction: column;
+  justify-content: top;
+  align-items: start;
+  position: relative;
+
+  .aw-item-title {
+    display: block;
+    font-size: 18px;
+    margin: 0 0 2.1rem;
+  }
+  .aw-item-sub {
+    display: block;
+    font-size: 26px;
+    margin: 0 0 2.1rem;
+  }
+  .aw-item-desc {
+    display: block;
+    font-size: 14px;
+  }
+}
+main .awards-visual .awards-list .awards-item .aw-span-wrap .aw-item-look-wrap {
+  display: flex;
+  justify-content: flex-end;
+
+  .aw-item-look {
+    padding-right: 0.5rem;
+  }
+}
+main
+  .awards-visual
+  .awards-list
+  .awards-item
+  .aw-span-wrap
+  .aw-item-look-wrap
+  span {
+  min-height: 7rem;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+main
+  .awards-visual
+  .awards-list
+  .awards-item
+  .aw-span-wrap
+  .aw-item-look-wrap
+  .aw-item-look::before {
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  margin-top: 0.4rem;
+}
+/* awards-visual style end */
+
+/* space-visual style */
+main .space-padding {
+  background-origin: padding-box;
+  padding-bottom: 24rem;
+}
+main .space-visual .space-list {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .space-visual .space-list .space-item {
+  height: 52.4rem;
+  border: 3px solid yellowgreen;
+  width: 50%;
+  background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/genesis-kr-main-space-15-desktop-960x540-ko.jpg")
+    center/cover no-repeat;
+  position: relative;
+  padding: 5.1rem 36rem 5.1rem 6rem;
+}
+main .space-visual .space-list .space-item.roadtrip {
+  background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/genesis-kr-main-road-trip-16-desktop-960%20x%20540-ko.jpg")
+    center/cover no-repeat;
+  margin-left: 4rem;
+}
+main .space-visual .space-list .space-item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #111;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .space-visual .space-list .space-item .space-item-padding {
+  position: relative;
+
+  .space-title {
+    font-size: 42px;
+  }
+  .space-sub {
+    font-size: 14px;
+    margin-top: 1.4rem;
+  }
+  .space-look-wrap {
+    font-size: 16px;
+    margin-top: 1.6rem;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: row;
+  }
+}
+main
+  .space-visual
+  .space-list
+  .space-item
+  .space-item-padding
+  .space-look-wrap
+  .space-look {
+  position: relative;
+  /* border: 1px solid blue; */
+}
+main
+  .space-visual
+  .space-list
+  .space-item
+  .space-item-padding
+  .space-look-wrap
+  .space-look::before {
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  margin-top: 0.4rem;
+}
+/* space style end */
+
+/* event style */
+main .event-padding {
+  background-origin: padding-box;
+  padding-bottom: 24rem;
+}
+
+main .event-padding .event-visual {
+  position: relative;
+}
+main .event-padding .event-visual .event-img {
+  height: 50vw;
+  background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/genesis-kr-main-genesis-events-17-desktop-1920x960-ko-4.jpg")
+    center/cover no-repeat;
+}
+main .event-padding .event-visual .event-item {
+  margin: 0 14rem;
+  position: absolute;
+  top: 50%;
+
+  .event-title {
+    font-size: 54px;
+    margin-bottom: 4.1rem;
+  }
+  .event-sub {
+    font-size: 26px;
+    margin: 4.8rem 0 1.6rem;
+  }
+}
+main .event-padding .event-visual .event-item .event-link {
+  font-size: 16px;
+  margin-top: 4.3rem;
+  height: 5.6rem;
+  width: fit-content;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .event-link-txt {
+    padding: 0 4rem;
+    width: 24rem;
+  }
+}
+main .event-padding .event-visual .event-item .event-link .event-link-txt {
+  /* 비포효과 주세요 */
+}
+/* event style end  */
+
+/* related style */
+main .related-padding {
+  background: #fff;
+  color: #000;
+  padding: 12rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .related-padding .related-visual {
+  width: 100%;
+}
+main .related-padding .related-visual .related-title {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 3.8rem;
+}
+main .related-padding .related-visual .related-list-wrap{
+  padding: 0 14rem;
+  height: 46.7rem;
+}
+main .related-padding .related-visual .related-list-wrap .related-list{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 -4rem;
+}
+main .related-padding .related-visual .related-list-wrap .related-item {
+  width: 33.3%;
+  border: 1px solid orange;
+  padding-left: 4rem;
+  height: 100%;
+}
+main .related-padding .related-visual .related-list .related-item .related-img {
+  height: 33rem;
+  border: #000 1px solid;
+}
+main .related-padding .related-visual .related-list  .related-event .related-img{
+  background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/common/related-contents/banner/genesis-related-contents-banner-event-pc-mo-630x404-kr.jpg")
+    center/cover;
+}
+main .related-padding .related-visual .related-list  .related-members .related-img{
+  background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/common/related-contents/banner/genesis-related-contents-banner-members-desktop-630x404-kr.jpg")
+    center/cover;
+}
+main .related-padding .related-visual .related-list  .related-myapp .related-img{
+  background: url("https://www.genesis.com/content/dam/genesis-p2/kr/assets/common/related-contents/banner/genesis-kr-related-contents-my-genesis-app-desktop-630x404-ko.jpg")
+    center/cover;
+}
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-item
+  .rel-span-wrap {
+  margin: 2.6rem 0 0;
+  display: block;
+  position: relative;
+  flex-grow: 1;
+
+  .related-sub {
+    font-size: 18px;
+  }
+  .related-desc {
+    font-size: 16px;
+    margin: 1.5rem 0 0;
+  }
+}
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-item
+  .rel-span-wrap .rel-look-wrap{
+    display: block;
+    font-size: 16px;
+    margin: 1.8rem 0 0;
+  }
+  main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-item
+  .rel-span-wrap .rel-look-wrap .related-look{
+    position: relative;
+  }
+main
+  .related-padding
+  .related-visual
+  .related-list
+  .related-item
+  .rel-span-wrap .rel-look-wrap .related-look::before{
+    content: "";
+    background: #111;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 100%;
+  }
