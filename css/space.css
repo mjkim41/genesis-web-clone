@@ -93,7 +93,9 @@ body header .site-navi-bar .sub-navi-bar .sub-navi-bar-list {
   color: #bbb;
 }
 
-
+body header a:hover {
+  color: #fff;
+}
 /* ---------------- start: main style --------------------- */
 body {
   font-family: GenesisSansTextKRRegular, sans-serif;
