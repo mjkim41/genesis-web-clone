@@ -1060,11 +1060,11 @@ footer .footer_top .share div.left li .letter span {
   display: block;
 }
 
-footer .footer_top .share ul.left li a i.light {
-  color: rgba(255, 255, 255, 0.7);
+footer .footer_top .share ul.left li a i {
+  color: #808080;
 }
 
-footer .footer_top .share ul.left li a:hover i.light {
+footer .footer_top .share ul.left li a:hover i {
   color: rgba(255, 255, 255, 1);
 }
 
